@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 47% 5%;
+    --foreground: 0 0% 98%;
+    --card: 220 47% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 47% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 47 95% 53%;
+    --primary-foreground: 220 47% 5%;
+    --secondary: 220 47% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 47% 10%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 220 47% 10%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 47% 10%;
+    --input: 220 47% 10%;
+    --ring: 47 95% 53%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.font-display {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.gradient-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(74, 222, 128, 0.1), transparent 50%);
+}
+
+.star {
+  animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
